@@ -131,9 +131,13 @@ def get_city_coordinates(city_name: str):
 
 def trigger_request(url:str):
     response = requests.get(url)
+    print(response, "response")
+    print(response.status_code, "response.status_code")
     if response.status_code == 200:
         # Extract the JSON content from the response
         data = response.json()
+        print(data, "Data retrieved successfully")
+
     else:
         print("Failed to retrieve data. Status Code:", response.status_code)
         raise requests.exceptions.RequestException(response.status_code)
@@ -145,11 +149,15 @@ def get_pm25(aqicn_url: str, country: str, city: str, street: str, day: datetime
     """
     Returns DataFrame with air quality (pm25) as dataframe
     """
+    print("hellooo")
     # The API endpoint URL
-    url = f"{aqicn_url}/?token={AQI_API_KEY}"
-
+    #url = f"{aqicn_url}?token={AQI_API_KEY}"
+    url = "https://api.waqi.info/feed/A60853/?token=881c74b0565ec0bc35c374362837e170d399c8f7"
+    #print(url, "url")
     # Make a GET request to fetch the data from the API
     data = trigger_request(url)
+
+    print(data['data'], "data['data']") 
 
     # if we get 'Unknown station' response then retry with city in url
     if data['data'] == "Unknown station":
