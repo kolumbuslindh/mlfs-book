@@ -18,7 +18,7 @@ The project is divided into four main components, each implemented as a separate
 
 - **Objective**: Update Feature Groups daily with new weather and air quality data.
 - **Process**:
-  - Download yesterday's weather and air quality data.
+  - Download today's weather and air quality data.
   - Generate new features, including lagged PM2.5 values for the previous three days.
   - Fetch weather forecasts for the next 7–10 days.
   - Update the corresponding Feature Groups in Hopsworks.
@@ -69,6 +69,7 @@ The project is divided into four main components, each implemented as a separate
 
 2. **Run Pipelines**:
 
+   - Create two files in the `data` folder: `aqi-api-key.txt` and `hopsworks-api-key.txt`. These files should contain our API keys from AQICN and Hopsworks. Do not make these public and add them in your .gitignore file, if any.
    - Execute `1_air_quality_feature_backfill.ipynb` to initialize Feature Groups.
    - Schedule `2_air_quality_feature_pipeline.ipynb` for daily updates using GitHub Actions or Modal.
    - Run `3_air_quality_training_pipeline.ipynb` to train and register the model.
@@ -82,6 +83,7 @@ The project is divided into four main components, each implemented as a separate
 - Implement hyperparameter tuning for model optimization.
 - Experiment with additional features and models.
 - Automate hindcast evaluation with alerts for significant prediction errors.
+- Implement a LLM to able to query and chat with the predictions.
 
 ## License
 
