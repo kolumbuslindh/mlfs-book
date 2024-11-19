@@ -4,6 +4,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "*/15 * * * *"
+    # run every 15 minutes
+    # this is for testing purposes
 
 jobs:
   schedule_pipelines:
