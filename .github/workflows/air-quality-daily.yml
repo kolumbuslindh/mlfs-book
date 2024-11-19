@@ -3,9 +3,9 @@ name: air-quality-daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
-    # run every 15 minutes
-    # this is for testing purposes
+    - cron: "11 6 * * *"
+    # run every day at 6:11 UTC
+    # we tested to run every 15 minutes with "*/15 * * * *"
 
 jobs:
   schedule_pipelines:
