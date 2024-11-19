@@ -2,6 +2,8 @@
 
 This project aims to predict air quality (PM2.5) levels using weather data and historical air quality measurements. The solution integrates with Hopsworks for feature and model management and includes pipelines for feature engineering, model training, and batch inference.
 
+See our page [here](https://kolumbuslindh.github.io/mlfs-book/air-quality/), visualizing the predicted air quality for Masthugget in Gothenburg.
+
 ## Project Structure
 
 The project is divided into four main components, each implemented as a separate Jupyter notebook:
