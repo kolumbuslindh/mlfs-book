@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Quality Dashboard - Masthugget, Gothenburg</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background: #0078d7;
+        color: #fff;
+        padding: 1rem 0;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+      }
+      main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+      section h2 {
+        margin-top: 0;
+        color: #0078d7;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      a {
+        color: #0078d7;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        background: #0078d7;
+        color: #fff;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Air Quality Dashboard</h1>
+      <p>Masthugget, Gothenburg</p>
+    </header>
+    <main>
+      <section>
+        <img src="../titanic/assets/img/logo.png" alt="Hopsworks Logo" />
+        <h2>Current Air Quality</h2>
+        <!-- Include air-quality.html or embed relevant content -->
+        <div id="air-quality-widget">
+          <!-- Content dynamically loaded from air-quality.html -->
+          {% include air-quality.html %}
+        </div>
+      </section>
+      <section>
+        <h2>PM2.5 Forecast</h2>
+        <img src="./assets/img/pm25_forecast.png" alt="PM2.5 Forecast" />
+      </section>
+      <section>
+        <h2>Model Performance Monitoring</h2>
+        <p>1-Day Hindcast: Predictions vs Outcomes</p>
+        <img src="./assets/img/pm25_hindcast_1day.png" alt="PM2.5 Hindcast" />
+      </section>
+      <section>
+        <h2>Future improvements: interact with the System</h2>
+        <p>
+          A Python program interacts with the air quality ML system using
+          language (text or voice), powered by a
+          <a
+            href="https://www.hopsworks.ai/dictionary/function-calling-with-llms"
+            target="_blank"
+          >
+            function-calling LLM</a
+          >.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Air Quality Dashboard | Powered by Hopsworks</p>
+    </footer>
+  </body>
+</html>
