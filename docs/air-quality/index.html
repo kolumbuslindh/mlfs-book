@@ -118,6 +118,39 @@
         margin: 1rem auto;
         display: block;
       }
+      .pm2-5-info {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .pm2-5-header h2 {
+        margin-bottom: 1rem;
+        color: #333;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .pm2-5-content p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .pm2-5-list {
+        list-style: disc;
+        padding-left: 1.5rem;
+        color: #444;
+      }
+
+      .pm2-5-list li {
+        margin-bottom: 0.5rem;
+      }
     </style>
   </head>
   <body>
@@ -136,24 +169,32 @@
         <p>1-Day hindcast: Predictions vs outcomes</p>
         <img src="./assets/img/pm25_hindcast_1day.png" alt="PM2.5 Hindcast" />
       </section>
-      <section>
-        <h2>What is PM2.5?</h2>
-        <p>
-          PM2.5 refers to fine particulate matter in the air that measures 2.5
-          micrometers or smaller in diameter. For comparison, these particles
-          are about 30 times smaller than the diameter of a human hair. Because
-          of their small size, PM2.5 particles can penetrate deep into the lungs
-          and even enter the bloodstream, posing significant health risks.
-        </p>
-        <p>Exposure to PM2.5 can lead to:</p>
-        <ul>
-          <li>Respiratory and cardiovascular issues</li>
-          <li>Aggravation of asthma and bronchitis</li>
-          <li>Reduced lung function and lung diseases</li>
-          <li>Increased risk of heart attacks and strokes</li>
-          <li>Premature death in people with preexisting health conditions</li>
-        </ul>
+      <section class="pm2-5-info">
+        <header class="pm2-5-header">
+          <h2>What is PM2.5?</h2>
+        </header>
+        <div class="pm2-5-content">
+          <p>
+            PM2.5 refers to fine particulate matter in the air that measures 2.5
+            micrometers or smaller in diameter. For comparison, these particles
+            are about 30 times smaller than the diameter of a human hair.
+            Because of their small size, PM2.5 particles can penetrate deep into
+            the lungs and even enter the bloodstream, posing significant health
+            risks.
+          </p>
+          <p>Exposure to PM2.5 can lead to:</p>
+          <ul class="pm2-5-list">
+            <li>Respiratory and cardiovascular issues</li>
+            <li>Aggravation of asthma and bronchitis</li>
+            <li>Reduced lung function and lung diseases</li>
+            <li>Increased risk of heart attacks and strokes</li>
+            <li>
+              Premature death in people with preexisting health conditions
+            </li>
+          </ul>
+        </div>
       </section>
+
       <section>
         <h2>Future improvements</h2>
         <p>
