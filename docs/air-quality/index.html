@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Air Quality Dashboard - Masthugget, Gothenburg</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Roboto", sans-serif;
         line-height: 1.6;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f9;
-        color: #333;
+        background-color: #f8f9fa;
+        color: #343a40;
       }
       header {
-        background: #0078d7;
+        background: linear-gradient(45deg, #0078d7, #0056a5);
         color: #fff;
-        padding: 1rem 0;
+        padding: 2rem 0;
         text-align: center;
       }
       header h1 {
         margin: 0;
+        font-size: 2.5rem;
       }
       main {
         max-width: 900px;
@@ -29,25 +34,29 @@
       }
       section {
         margin-bottom: 2rem;
-        padding: 1rem;
+        padding: 1.5rem;
         background: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: transform 0.2s ease-in-out;
+      }
+      section:hover {
+        transform: translateY(-5px);
       }
       section h2 {
         margin-top: 0;
-        color: #0078d7;
+        color: #0056a5;
       }
       img {
         max-width: 100%;
         height: auto;
         display: block;
         margin: 1rem 0;
-        border-radius: 5px;
+        border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       a {
-        color: #0078d7;
+        color: #0056a5;
         text-decoration: none;
       }
       a:hover {
@@ -60,22 +69,22 @@
         color: #fff;
         margin-top: 2rem;
       }
+      .highlight {
+        background: #e3f2fd;
+        padding: 1rem;
+        border-radius: 8px;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Air Quality Dashboard</h1>
       <p>Masthugget, Gothenburg</p>
+      <p>Made by Kolumbus Lindh and Filip Orestav</p>
     </header>
     <main>
       <section>
         <img src="../titanic/assets/img/logo.png" alt="Hopsworks Logo" />
-        <h2>Current Air Quality</h2>
-        <!-- Include air-quality.html or embed relevant content -->
-        <div id="air-quality-widget">
-          <!-- Content dynamically loaded from air-quality.html -->
-          {% include air-quality.html %}
-        </div>
       </section>
       <section>
         <h2>PM2.5 Forecast</h2>
@@ -87,10 +96,10 @@
         <img src="./assets/img/pm25_hindcast_1day.png" alt="PM2.5 Hindcast" />
       </section>
       <section>
-        <h2>Future improvements: interact with the System</h2>
+        <h2>Future Improvements</h2>
         <p>
-          A Python program interacts with the air quality ML system using
-          language (text or voice), powered by a
+          A future improvement could be interacting with the air quality ML
+          system using language (text or voice), powered by a
           <a
             href="https://www.hopsworks.ai/dictionary/function-calling-with-llms"
             target="_blank"
