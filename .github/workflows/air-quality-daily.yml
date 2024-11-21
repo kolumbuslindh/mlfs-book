@@ -3,7 +3,7 @@ name: air-quality-daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "11 6 * * *"
     # run every day at 13:00 UTC (14:00 Swedish time)
     # we tested to run every 15 minutes with "*/15 * * * *"
 
